@@ -3,13 +3,7 @@ rm -rf /var/lib/myrts
 systemctl stop myrts-remote
 rm /etc/systemd/system/myrts-remote.service
 mkdir /var/lib/myrts
-echo -n "Nama device:"
-read device
-while [ -z "$device" ]
-do
-    echo -n "Nama device:"
-    read device
-done
+read -n 1 -p "Device name: " device
 echo $device > /var/lib/myrts/desc.txt
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y curl pulseaudio libpulse-dev librust-libpulse-sys-dev alsa-utils libogg-dev libvorbis-dev ffmpeg libopus-dev
