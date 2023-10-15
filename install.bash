@@ -9,7 +9,7 @@ curl -L https://qcynaut.github.io/myrts-client/asound.state -o ./asound.state
 sudo alsactl --file ./asound.state restore
 sudo pulseaudio --start
 curl -L https://qcynaut.github.io/myrts-client/client -o /var/lib/myrts/client
-chmod +x ./remote
+chmod +x /var/lib/myrts/client
 curl -L https://qcynaut.github.io/myrts-client/myrts-client.service -o /etc/systemd/system/myrts-client.service
 systemctl daemon-reload
 systemctl enable myrts-client
