@@ -1,0 +1,11 @@
+[Unit]
+Description=Client for myrts
+After=network.target
+
+[Service]
+ExecStart=/var/lib/myrts/client
+User=root
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
