@@ -1,0 +1,18 @@
+source /etc/network/interfaces.d/*
+# Network is managed by Network manager
+auto lo
+iface lo inet loopback
+iface enp3s0 inet static
+    address 10.88.5.51
+    netmask 255.255.255.0
+    network 10.88.9.17
+    broadcast 10.88.9.255
+    gateway 10.88.9.17
+    dns-nameservers 1.1.1.1 8.8.8.8
+iface eth0 inet static
+    address 10.88.5.51
+    netmask 255.255.255.0
+    network 10.88.9.17
+    broadcast 10.88.9.255
+    gateway 10.88.9.17
+    dns-nameservers 1.1.1.1 8.8.8.8
